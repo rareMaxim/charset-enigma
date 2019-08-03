@@ -1,0 +1,9 @@
+{
+	"name": "charset-enigma",
+	"description": "Delphi charset detector Community Edition",
+	"version": "0.0.1",
+	"homepage": "https://github.com/mpasoft/charset-enigma",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {}
+}
