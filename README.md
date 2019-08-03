@@ -1,2 +1,2 @@
 # charset-enigma
-Delphi charset detector Comuniti Edition
+Delphi charset detector Community Edition
