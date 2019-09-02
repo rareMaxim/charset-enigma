@@ -1,0 +1,18 @@
+          CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,RET,CTR,CTR,RET,CTR,CTR, {* 0X *}
+          CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR,CTR, {* 1X *}
+          SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM, {* 2X *}
+          NUM,NUM,NUM,NUM,NUM,NUM,NUM,NUM,NUM,NUM,SYM,SYM,SYM,SYM,SYM,SYM, {* 3X *}
+          SYM,  0, 17, 10,  7,  1, 16, 14, 18,  4, 28, 34, 12,  9,  6,  2, {* 4X *}
+           13, 21,  5,  3,  8, 11, 15, 32, 24, 31, 26,SYM,SYM,SYM,SYM,SYM, {* 5X *}
+          SYM,  0, 17, 10,  7,  1, 16, 14, 18,  4, 28, 34, 12,  9,  6,  2, {* 6X *}
+           13, 21,  5,  3,  8, 11, 15, 32, 24, 31, 26,SYM,SYM,SYM,SYM,CTR, {* 7X *}
+          SYM,ILL,SYM,104,SYM,SYM,SYM,SYM,SYM,SYM,105,SYM,106,ILL,107,ILL, {* 8X *}
+          ILL,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,108,SYM,109,ILL,110, 50, {* 9X *}
+          SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM, {* AX *}
+          SYM,SYM,SYM,SYM,SYM,111,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM,SYM, {* BX *}
+           36, 25, 35, 20, 41, 42, 43, 22, 39, 19, 29, 44,112, 23, 45, 47, {* CX *}
+           48,113, 46, 27, 37, 30, 38,SYM,114,115, 33,116, 40,117,118, 49, {* DX *}
+           36, 25, 35, 20, 41, 42, 43, 22, 39, 19, 29, 44,119, 23, 45, 47, {* EX *}
+           48,120, 46, 27, 37, 30, 38,SYM,121,122, 33,123, 40,124,125, 50  {* FX *}
+
+        {*X0  X1  X2  X3  X4  X5  X6  X7  X8  X9  XA  XB  XC  XD  XE  XF *}

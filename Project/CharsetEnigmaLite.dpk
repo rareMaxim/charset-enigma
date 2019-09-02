@@ -1,0 +1,125 @@
+package CharsetEnigmaLite;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  CD.Analizer.CharDistribution in '..\Source\CD.Analizer.CharDistribution.pas',
+  CD.Analizer.Chinese.BIG5 in '..\Source\CD.Analizer.Chinese.BIG5.pas',
+  CD.Analizer.Chinese.EUCTW in '..\Source\CD.Analizer.Chinese.EUCTW.pas',
+  CD.Analizer.Chinese.GB18030 in '..\Source\CD.Analizer.Chinese.GB18030.pas',
+  CD.Analizer.Japanese.ContextAnalyser in '..\Source\CD.Analizer.Japanese.ContextAnalyser.pas',
+  CD.Analizer.Japanese.EUCJPContext in '..\Source\CD.Analizer.Japanese.EUCJPContext.pas',
+  CD.Analizer.Japanese.EUCJPDistribution in '..\Source\CD.Analizer.Japanese.EUCJPDistribution.pas',
+  CD.Analizer.Japanese.SJISContext in '..\Source\CD.Analizer.Japanese.SJISContext.pas',
+  CD.Analizer.Japanese.SJISDistribution in '..\Source\CD.Analizer.Japanese.SJISDistribution.pas',
+  CD.Analizer.Korean.EUCKRDistribution in '..\Source\CD.Analizer.Korean.EUCKRDistribution.pas',
+  CD.Core.BitPackage in '..\Source\CD.Core.BitPackage.pas',
+  CD.Core.BOMTools in '..\Source\CD.Core.BOMTools.pas',
+  CD.Core.CharsetsInfo.Initializer in '..\Source\CD.Core.CharsetsInfo.Initializer.pas',
+  CD.Core.CharsetsInfo in '..\Source\CD.Core.CharsetsInfo.pas',
+  CD.Core.CodingStateMachine in '..\Source\CD.Core.CodingStateMachine.pas',
+  CD.Core.InputState in '..\Source\CD.Core.InputState.pas',
+  CD.DetectionDetail in '..\Source\CD.DetectionDetail.pas',
+  CD.DetectionResult in '..\Source\CD.DetectionResult.pas',
+  CD.Model.Bulgarian in '..\Source\CD.Model.Bulgarian.pas',
+  CD.Model.Danish in '..\Source\CD.Model.Danish.pas',
+  CD.Model.Finnish in '..\Source\CD.Model.Finnish.pas',
+  CD.Model.Greek in '..\Source\CD.Model.Greek.pas',
+  CD.Model.Hebrew in '..\Source\CD.Model.Hebrew.pas',
+  CD.Model.Ibm855.Russian in '..\Source\CD.Model.Ibm855.Russian.pas',
+  CD.Model.Ibm866.Russian in '..\Source\CD.Model.Ibm866.Russian.pas',
+  CD.Model.Iso_8859_5.Bulgarian in '..\Source\CD.Model.Iso_8859_5.Bulgarian.pas',
+  CD.Model.Iso_8859_5.Russian in '..\Source\CD.Model.Iso_8859_5.Russian.pas',
+  CD.Model.Iso_8859_7.Greek in '..\Source\CD.Model.Iso_8859_7.Greek.pas',
+  CD.Model.Italian in '..\Source\CD.Model.Italian.pas',
+  CD.Model.Koi8r.Russian in '..\Source\CD.Model.Koi8r.Russian.pas',
+  CD.Model.MacCyrillic.Russian in '..\Source\CD.Model.MacCyrillic.Russian.pas',
+  CD.Model.Portuguese in '..\Source\CD.Model.Portuguese.pas',
+  CD.Model.Register.Lite in '..\Source\CD.Model.Register.Lite.pas',
+  CD.Model.Russian.MacCyrillic in '..\Source\CD.Model.Russian.MacCyrillic.pas',
+  CD.Model.Russian in '..\Source\CD.Model.Russian.pas',
+  CD.Model.Sequence in '..\Source\CD.Model.Sequence.pas',
+  CD.Model.SM.BIG5 in '..\Source\CD.Model.SM.BIG5.pas',
+  CD.Model.SM.EUCJP in '..\Source\CD.Model.SM.EUCJP.pas',
+  CD.Model.SM.EUCKR in '..\Source\CD.Model.SM.EUCKR.pas',
+  CD.Model.SM.EUCTW in '..\Source\CD.Model.SM.EUCTW.pas',
+  CD.Model.SM.GB18030 in '..\Source\CD.Model.SM.GB18030.pas',
+  CD.Model.SM.HZ_GB_2312 in '..\Source\CD.Model.SM.HZ_GB_2312.pas',
+  CD.Model.SM.ISO2022CN in '..\Source\CD.Model.SM.ISO2022CN.pas',
+  CD.Model.SM.ISO2022JP in '..\Source\CD.Model.SM.ISO2022JP.pas',
+  CD.Model.SM.ISO2022KR in '..\Source\CD.Model.SM.ISO2022KR.pas',
+  CD.Model.SM.SJIS in '..\Source\CD.Model.SM.SJIS.pas',
+  CD.Model.SM.UCS2BE in '..\Source\CD.Model.SM.UCS2BE.pas',
+  CD.Model.SM.UCS2LE in '..\Source\CD.Model.SM.UCS2LE.pas',
+  CD.Model.SM.UTF8 in '..\Source\CD.Model.SM.UTF8.pas',
+  CD.Model.Spanish in '..\Source\CD.Model.Spanish.pas',
+  CD.Model.StateMachine in '..\Source\CD.Model.StateMachine.pas',
+  CD.Model.Win1251.Bulgarian in '..\Source\CD.Model.Win1251.Bulgarian.pas',
+  CD.Model.Win1253.Greek in '..\Source\CD.Model.Win1253.Greek.pas',
+  CD.Model.Win1255.Hebrew in '..\Source\CD.Model.Win1255.Hebrew.pas',
+  CD.Model.Windows_1251.Russian in '..\Source\CD.Model.Windows_1251.Russian.pas',
+  CD.Model.Windows_1252.Danish in '..\Source\CD.Model.Windows_1252.Danish.pas',
+  CD.Model.Windows_1252.Estonian in '..\Source\CD.Model.Windows_1252.Estonian.pas',
+  CD.Model.Windows_1252.Finnish in '..\Source\CD.Model.Windows_1252.Finnish.pas',
+  CD.Model.Windows_1252.French in '..\Source\CD.Model.Windows_1252.French.pas',
+  CD.Model.Windows_1252.German in '..\Source\CD.Model.Windows_1252.German.pas',
+  CD.Model.Windows_1252.Irish in '..\Source\CD.Model.Windows_1252.Irish.pas',
+  CD.Model.Windows_1252.Italian in '..\Source\CD.Model.Windows_1252.Italian.pas',
+  CD.Model.Windows_1252.Portuguese in '..\Source\CD.Model.Windows_1252.Portuguese.pas',
+  CD.Model.Windows_1252.Spanish in '..\Source\CD.Model.Windows_1252.Spanish.pas',
+  CD.Model.Windows_1252.Swedish in '..\Source\CD.Model.Windows_1252.Swedish.pas',
+  CD.Prober.Big5 in '..\Source\CD.Prober.Big5.pas',
+  CD.Prober.Charset in '..\Source\CD.Prober.Charset.pas',
+  CD.Prober.EscCharset in '..\Source\CD.Prober.EscCharset.pas',
+  CD.Prober.EUCJP in '..\Source\CD.Prober.EUCJP.pas',
+  CD.Prober.EUCKR in '..\Source\CD.Prober.EUCKR.pas',
+  CD.Prober.EUCTW in '..\Source\CD.Prober.EUCTW.pas',
+  CD.Prober.GB18030 in '..\Source\CD.Prober.GB18030.pas',
+  CD.Prober.Hebrew in '..\Source\CD.Prober.Hebrew.pas',
+  CD.Prober.Latin1 in '..\Source\CD.Prober.Latin1.pas',
+  CD.Prober.MBCSGroup in '..\Source\CD.Prober.MBCSGroup.pas',
+  CD.Prober.Register.Lite in '..\Source\CD.Prober.Register.Lite.pas',
+  CD.Prober.SBCSGroup in '..\Source\CD.Prober.SBCSGroup.pas',
+  CD.Prober.SingleByteCharSet in '..\Source\CD.Prober.SingleByteCharSet.pas',
+  CD.Prober.SJIS in '..\Source\CD.Prober.SJIS.pas',
+  CD.Prober.Store in '..\Source\CD.Prober.Store.pas',
+  CD.Prober.UTF8 in '..\Source\CD.Prober.UTF8.pas',
+  CD.ProbingState in '..\Source\CD.ProbingState.pas',
+  CharsetEnigma.Core in '..\Source\CharsetEnigma.Core.pas',
+  CharsetEnigma.Lite in '..\Source\CharsetEnigma.Lite.pas',
+  Helpers.TStream in '..\Source\Helpers.TStream.pas',
+  CD.Model.Estonian in '..\Source\CD.Model.Estonian.pas',
+  CD.Model.French in '..\Source\CD.Model.French.pas',
+  CD.Model.German in '..\Source\CD.Model.German.pas',
+  CD.Model.Irish in '..\Source\CD.Model.Irish.pas',
+  CD.Model.Swedish in '..\Source\CD.Model.Swedish.pas';
+
+end.
