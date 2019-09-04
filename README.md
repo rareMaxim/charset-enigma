@@ -4,6 +4,10 @@
 ![Version](https://img.shields.io/badge/dynamic/json?color=blue&label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fms301%2Fcharset-enigma%2Fmaster%2Fboss.json)
 
 Delphi charset detector Community Edition
+### For install in your project using [boss](https://github.com/HashLoad/boss):
+``` sh
+$ boss install github.com/ms301/charset-enigma
+```
 # Docs
 The following charsets are supported:
 
