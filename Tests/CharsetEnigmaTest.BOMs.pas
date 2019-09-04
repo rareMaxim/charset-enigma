@@ -15,8 +15,6 @@ type
     [Test]
     procedure TestBomUTF16_BE;
     [Test]
-    procedure TestBomUTF_16BE;
-    [Test]
     procedure TestBomUTF16_LE;
     [Test]
     procedure TestBomUTF32_BE;
@@ -188,17 +186,6 @@ begin
   buf := [$2B, $2F, $76, $2F, $FF, $FE, $00, $00, $68, $00, $00, $00];
   return := TCharsetEnigma.DetectFromBytes(buf);
   Assert.AreEqual(TCharsets.UTF7, return.Detected.EncodingName);
-  Assert.AreEqual(Double(1.0), Double(return.Detected.Confidence));
-end;
-
-procedure TCharsetEnigmaBOMsTest.TestBomUTF_16BE;
-var
-  buf: TArray<Byte>;
-  return: IDetectionResult;
-begin
-  buf := [$FE, $FF, $00, $00, $65];
-  return := TCharsetEnigma.DetectFromBytes(buf);
-  Assert.AreEqual(TCharsets.UTF16_BE, return.Detected.EncodingName);
   Assert.AreEqual(Double(1.0), Double(return.Detected.Confidence));
 end;
 
