@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\Users\admin\Desktop\Lite\bin\CharsetEnigmaTestLite.exe" total="67" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2019-09-02" time="0.218">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="CharsetEnigmaTestLite.exe" executed="true" result="Success" success="True" time="0.218" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="CharsetEnigmaTest" executed="true" result="Success" success="True" time="0.503" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TBitPackageTest" executed="True" result="Success" success="True" time="0.218" >
+                <results>
+                  <test-case name="TestPack" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestUnpack" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="Fixture" name="Bath Encoding Test" executed="True" result="Success" success="True" time="0.218" >
+                <results>
+                  <test-case name="Compare.Compare (00)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (01)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (02)" executed="True" result="Success" success="True" time="0.025" asserts="0" />
+                  <test-case name="Compare.Compare (03)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (04)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (05)" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="Compare.Compare (06)" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="Compare.Compare (07)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (08)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (09)" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="Compare.Compare (10)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (11)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (12)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (13)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (14)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (15)" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="Compare.Compare (16)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (17)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (18)" executed="True" result="Success" success="True" time="0.005" asserts="0" />
+                  <test-case name="Compare.Compare (19)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (20)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (21)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="Compare.Compare (22)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (23)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (24)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (25)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (26)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (27)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (28)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="Compare.Compare (29)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (30)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (31)" executed="True" result="Success" success="True" time="0.061" asserts="0" />
+                  <test-case name="Compare.Compare (32)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (33)" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Compare.Compare (34)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="Compare.Compare (35)" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="PathWithData" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="Fixture" name="TCharsetEnigmaBOMsTest" executed="True" result="Success" success="True" time="0.064" >
+                <results>
+                  <test-case name="TestBomUtf8" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF16_BE" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="TestBomUTF_16BE" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF16_LE" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF32_BE" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="TestBomUTF32_LE" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                  <test-case name="TestBomUTF7_1" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF7_2" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF7_3" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="TestBomUTF7_4" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestBomUTF1" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="TestBomUTF_EBCDIC" executed="True" result="Success" success="True" time="0.009" asserts="0" />
+                  <test-case name="TestBomSCSU" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                  <test-case name="TestBomBOCU_1" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                  <test-case name="TestBomGB_18030" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="Fixture" name="TCharsetDetectorTest" executed="True" result="Success" success="True" time="0.003" >
+                <results>
+                  <test-case name="DetectFromStreamMaxBytes.1" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.2" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.3" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.4" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.5" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.6" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DetectFromStreamMaxBytes.7" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="TestAscii" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestUTF8_1" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestIssue3" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestOutOfRange" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestOutOfRange2" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestSingleChar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

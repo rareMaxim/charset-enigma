@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D83904BB-3882-45A1-AA5B-A90A11956D27}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project\CharsetEnigmaLite.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tests\CharsetEnigmaTestLite.dproj">
+            <Dependencies>Project\CharsetEnigmaLite.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Sample\Console\CEDemo.dproj">
+            <Dependencies>Project\CharsetEnigmaLite.dproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CharsetEnigmaLite">
+        <MSBuild Projects="Project\CharsetEnigmaLite.dproj"/>
+    </Target>
+    <Target Name="CharsetEnigmaLite:Clean">
+        <MSBuild Projects="Project\CharsetEnigmaLite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CharsetEnigmaLite:Make">
+        <MSBuild Projects="Project\CharsetEnigmaLite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CharsetEnigmaTestLite" DependsOnTargets="CharsetEnigmaLite">
+        <MSBuild Projects="Tests\CharsetEnigmaTestLite.dproj"/>
+    </Target>
+    <Target Name="CharsetEnigmaTestLite:Clean" DependsOnTargets="CharsetEnigmaLite:Clean">
+        <MSBuild Projects="Tests\CharsetEnigmaTestLite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CharsetEnigmaTestLite:Make" DependsOnTargets="CharsetEnigmaLite:Make">
+        <MSBuild Projects="Tests\CharsetEnigmaTestLite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CEDemo" DependsOnTargets="CharsetEnigmaLite">
+        <MSBuild Projects="Sample\Console\CEDemo.dproj"/>
+    </Target>
+    <Target Name="CEDemo:Clean" DependsOnTargets="CharsetEnigmaLite:Clean">
+        <MSBuild Projects="Sample\Console\CEDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CEDemo:Make" DependsOnTargets="CharsetEnigmaLite:Make">
+        <MSBuild Projects="Sample\Console\CEDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CharsetEnigmaLite;CharsetEnigmaTestLite;CEDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CharsetEnigmaLite:Clean;CharsetEnigmaTestLite:Clean;CEDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CharsetEnigmaLite:Make;CharsetEnigmaTestLite:Make;CEDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

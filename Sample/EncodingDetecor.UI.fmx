@@ -1,0 +1,35 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 428
+  ClientWidth = 693
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object grd1: TGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 693.000000000000000000
+    Size.Height = 428.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnGetValue = grd1GetValue
+    OnDragOver = grd1DragOver
+    OnDragDrop = grd1DragDrop
+    Viewport.Width = 673.000000000000000000
+    Viewport.Height = 403.000000000000000000
+    object strngclmn1: TStringColumn
+      Header = 'Filename'
+      Size.Width = 289.000000000000000000
+    end
+    object strngclmn2: TStringColumn
+      Header = 'Encoding'
+      Size.Width = 151.000000000000000000
+    end
+  end
+end
