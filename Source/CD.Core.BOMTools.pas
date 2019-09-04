@@ -89,14 +89,16 @@ var
   ABomInfo: TBomInfo;
 begin
   Result := '';
-  if ALength > 3 then
-  begin
-    if FIsSorted = False then
-      DoSortBoms;
-    for ABomInfo in FBomSets do
-      if StartsWith(AData, ABomInfo.BomMarker) then
-        Exit(ABomInfo.Name);
-  end;
+  if ALength <= 3 then
+    Exit;
+  if FIsSorted = False then
+    DoSortBoms;
+  for ABomInfo in FBomSets do
+    if StartsWith(AData, ABomInfo.BomMarker) then
+    begin
+      Result := ABomInfo.Name;
+      Break;
+    end;
 end;
 
 class procedure TBomTools.SelfRegisterBoms;
@@ -106,9 +108,12 @@ begin
   Add('UTF-16LE', [$FF, $FE]);
   Add('UTF-32BE', [$00, $00, $FE, $FF]);
   Add('UTF-32LE', [$FF, $FE, $00, $00]);
-  Add('UTF-7', [[$2B, $2F, $76, $38], [$2B, $2F, $76, $39], [$2B, $2F, $76, $2B], [$2B, $2F, $76, $2F]]);
+  //Add('UTF-7', [[$2B, $2F, $76, $38], [$2B, $2F, $76, $39], [$2B, $2F, $76, $2B], [$2B, $2F, $76, $2F]]);
+  Add('UTF-7', [$2B, $2F, $76]);
   Add('UTF-1', [$F7, $64, $4C]);
   Add('UTF-EBCDIC', [$DD, $73, $66, $73]);
+  Add('UCS-2143', [$00, $00, $FF, $FE]);
+  Add('UCS-3412', [$FE, $FF, $00, $00]);
   Add('SCSU', [$0E, $FE, $FF]);
   Add('BOCU-1', [$FB, $EE, $28]);
   Add('GB-18030', [$84, $31, $95, $33]);
