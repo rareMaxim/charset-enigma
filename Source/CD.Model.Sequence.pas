@@ -54,9 +54,8 @@ type
   public
     function GetOrder(b: Byte): Byte;
     function GetPrecedence(Pos: Integer): Byte;
-    constructor Create(charToOrderMap, precedenceMatrix: TArray<Byte>;
-      freqCharCount: Integer; typicalPositiveRatio: Single;
-      keepEnglishLetter: Boolean; charsetName: string);
+    constructor Create(charToOrderMap, precedenceMatrix: TArray<Byte>; freqCharCount: Integer;
+      typicalPositiveRatio: Single; keepEnglishLetter: Boolean; charsetName: string);
     property typicalPositiveRatio: Single read GetTypicalPositiveRatio;
     property keepEnglishLetter: Boolean read GetKeepEnglishLetter;
     property charsetName: string read GetCharsetName;
@@ -67,9 +66,8 @@ implementation
 
 { TSequenceModel }
 
-constructor TSequenceModel.Create(charToOrderMap, precedenceMatrix
-  : TArray<Byte>; freqCharCount: Integer; typicalPositiveRatio: Single;
-  keepEnglishLetter: Boolean; charsetName: string);
+constructor TSequenceModel.Create(charToOrderMap, precedenceMatrix: TArray<Byte>; freqCharCount: Integer;
+  typicalPositiveRatio: Single; keepEnglishLetter: Boolean; charsetName: string);
 begin
   Self.FCharToOrderMap := charToOrderMap;
   Self.FPrecedenceMatrix := precedenceMatrix;
@@ -96,7 +94,10 @@ end;
 
 function TSequenceModel.GetOrder(b: Byte): Byte;
 begin
-  Result := FCharToOrderMap[b];
+  if b < Length(FCharToOrderMap) then
+    Result := FCharToOrderMap[b]
+  else
+    Result := 0;
 end;
 
 function TSequenceModel.GetPrecedence(Pos: Integer): Byte;

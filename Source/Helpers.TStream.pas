@@ -23,8 +23,11 @@ begin
   LCurrentPosition := Self.Position; // Запоминаем текущий курсор
   Self.Position := 0; // Переходим в начало
   SetLength(Result, Self.Size); // Задаем размер результата
-  Self.Read(Result[0], Self.Size); // Записываем данные в результат
-  Self.Position := LCurrentPosition; // Возвращаемся на исходную позицию
+  if Self.Size > 0 then
+  begin
+    Self.Read(Result[0], Self.Size); // Записываем данные в результат
+    Self.Position := LCurrentPosition; // Возвращаемся на исходную позицию
+  end;
 end;
 
 procedure TStreamHelper.WriteByte(Value: Byte);
